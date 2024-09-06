@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <h1>CLICKER APP</h1>
+    </div>
+    <hr>
+    <div id="main">
+        <div id="counter">
+            Clicks:<b id="points">0</b><br>
+            Coins:<b id="coins">0</b><br>
+        </div>
+        <div id="image">
+        <img src="oi.jpg" alt="oi" onclick="increment()">
+        </div>
+    </div>
+    <hr>
+    <div id="shop">
+        <h1>Shop</h1>
+        <div id="upgrades">
+            <h2>Upgrades:</h2> 
+            <ul>
+                <li>
+                    <div id="doubleCoins">
+                        <label for="doubleCoins">2x Coins (Cost: 10 Coins)</label>
+                        <input type="button" value="Buy" onclick="buy(10,'doubleCoins')">
+                    </div>
+                </li>
+                <li>
+                    <div id="tenXCoins">
+                        <label>10x Coins (Cost: 1000 Coins)</label>
+                        <input type="button" value="Buy" id="buyx10" onclick="buy(1000,'tenXCoins')" disabled>
+                    </div>
+                </li>
+                <li>
+                    <div id="autoClicker">
+                        <label>Automatic clicker activation [1 click every second] (Cost: 100 Coins)</label>
+                        <input type="button" value="Buy" onclick="buy(100,'autoClicker')">
+                    </div>
+                </li>
+                <li>
+                    <div id="autoClickerUpgrade">
+                        <label>Automatic clicker Upgrade [1 click every 1/5 second] (Cost: 3000 Coins)</label>
+                        <input type="button" value="Buy" id="autoClickerUpgradeButton" onclick="buy(3000,'autoClickerUpgrade')" disabled>
+                    </div>
+                </li>
+                <li>
+                    <div id="coinsEvery5Sec">
+                        <label>Coin counter updates every 5 clicks [instead of 10 at the beginning] (Cost: 500 Coins)</label>
+                        <input type="button" value="Buy" onclick="buy(500,'coinsEvery5Sec')">
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        
+    </div>
+    <hr>
+    <footer>
+        AF
+    </footer>
+</body>
+</html>
